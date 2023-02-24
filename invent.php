@@ -25,7 +25,7 @@
 
 </nav>
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <button class="btn btn-primary me-md-2" type="button">Add New Drug</button>
+<a class="btn btn-primary" href="add-drug.php">Add New Drug</a>
 </div>
     <table class="table">
         <thead>
