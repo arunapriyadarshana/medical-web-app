@@ -7,17 +7,19 @@ body {font-family: Arial, Helvetica, sans-serif;}
 form {border: 3px solid #f1f1f1;}
 
 img{
-    width:850px;
+    width:750px;
     
 }
 .Login{
     margin-left: 75px;
-    
+
+   
     
 
 }
 .wholepage{
     display:flex;
+
 }
 
 input[type=text], input[type=password] {
@@ -33,7 +35,7 @@ input[type=text], input[type=password] {
 button {
   background-color: navy;
   color: white;
-  padding: 14px 20px;
+  padding: 12px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
@@ -44,11 +46,6 @@ button:hover {
   opacity: 0.8;
 }
 
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
 
 .imgcontainer {
   text-align: center;
@@ -61,7 +58,11 @@ img.avatar {
 }
 
 .container {
-  padding: 75px;
+  padding: 100px;
+}
+.loginbutton{
+    width:400px;
+    text-align: center;
 }
 
 span.psw {
@@ -69,46 +70,35 @@ span.psw {
   padding-top: 16px;
 }
 
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 250px) {
   span.psw {
      display: block;
      float: none;
   }
-  .cancelbtn {
-     width: 100%;
-  }
+  
 }
 </style>
 </head>
 <body>
 <div class="wholepage">
-<img src="pharmaceutical-industry.jpg" alt="DeltaX">
+<img src="./media/images/pharmaceutical-industry.jpg" alt="DeltaX">
 <div class="Login">
 <h2>Login</h2>
 
 <h4>Welcome back! Please login to your account</h4>
 
 <form action="/action_page.php" method="post">
-  <div class="imgcontainer">
-    <img src="images (1).png" alt="Avatar" class="avatar">
-  </div>
+ 
 
   <div class="container">
-    <input type="text" placeholder="Enter Username" name="uname" required>
-
+    <div class="Enter">
+        <input type="text" placeholder="Enter Username" name="uname" required>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+    </div>
     
-    <input type="password" placeholder="Enter Password" name="psw" required>
-    <div class="container" style="background-color:#f1f1f1">
-    
-        <span class="psw"><a href="#">Forgot password?</a></span>
-    
-      </div>   
-    <button type="submit">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-  </div>
+    <div class="loginbutton">
+    <button type="submit">Login</button></div>
+    </div>
   <div class="Haveanacc" style="background-color:#f1f1f1">
     <h4> Don't have an account?<span class="Sign"><a href="#">Sign Up</a></span></h4>
 
