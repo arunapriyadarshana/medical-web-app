@@ -43,10 +43,10 @@ if (isset($_POST['submit'])) {
                 $_SESSION['user_id'] = $user_data["id"];
                 if ($user_data['parm_pass'] === $password) {
                   echo 'valid';
-                    // header('Location: index/index.php');
+                    header('Location: index.php');
                     die;
                 }else{
-                    $errors['password'] = "Invalid password";
+                    $errors['password'] = "Invalid password or Username";
                 }
             }else{
                 $errors['email'] = "Account doesn't exists";
@@ -62,21 +62,19 @@ if (isset($_POST['submit'])) {
 
 ?>
 
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 form {border: 3px solid #f1f1f1;}
 
-img{
-    width:750px;
-    
-}
+
 .Login{
-    margin-left: 75px;
+    margin-left: 450px;
 
    
     
@@ -146,7 +144,7 @@ span.psw {
 </head>
 <body>
 <div class="wholepage">
-<img src="./media/images/pharmaceutical-industry.jpg" alt="DeltaX">
+
 <div class="Login">
 <h2>Login</h2>
 
@@ -158,14 +156,16 @@ span.psw {
   <div class="container">
     <div class="Enter">
         <input type="text" placeholder="Enter Email" name="email" required>
+        <div class="red-text"><?php echo $errors['email'];  ?></div>
         <input type="password" placeholder="Enter Password" name="password" required>
+        <div class="red-text"><?php echo $errors['password'];  ?></div>
     </div>
     
     <div class="loginbutton">
-    <button type="submit">Login</button></div>
+    <button type="submit" value="Login" name="submit">Login</button></div>
     </div>
   <div class="Haveanacc" style="background-color:#f1f1f1">
-    <h4> Don't have an account?<span class="Sign"><a href="#">Sign Up</a></span></h4>
+    <h4> Don't have an account?<span class="Sign"><a href="signup.php">Sign Up</h4>
 
   </div>
 </form>
