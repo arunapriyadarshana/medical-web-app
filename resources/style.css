@@ -1,0 +1,11 @@
+.navbar-brand{
+    display: flex;
+    flex-wrap: space-between;
+}
+.table{
+    padding-top:100px;
+}
+.gap-2 {
+    margin: 100px!important;
+    gap: 0.5rem;
+}
